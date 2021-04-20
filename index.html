@@ -18,17 +18,28 @@
     <input type="text" v-model="count" />
   </div>
 
+  <script src="js/dep.js"></script>
+  <script src="js/watcher.js"></script>
   <script src="js/observer.js"></script>
+  <script src="js/compiler.js"></script>
   <!-- 这是我们需要实现的vue.js -->
   <script src="js/vue.js"></script>
   <script>
     let vm = new Vue({
-      el: "app",
+      el: "#app",
       data: {
         msg: "hello wrold",
-        count: 100
+        count: 100,
+        person: {
+          name: "Tom"
+        }
       }
     })
+
+    // console.log(vm.msg)
+    // vm.msg = {
+    //   test: "test"
+    // }
   </script>
 </body>
 </html>
